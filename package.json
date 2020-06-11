@@ -1,0 +1,18 @@
+{
+  "name": "watchlist",
+  "version": "1.0.0",
+  "description": "Movie Watchlist and Suggestions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin Nieset",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
