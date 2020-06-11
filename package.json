@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Movie Watchlist and Suggestions",
   "main": "index.js",
-  "repository": "https://github.com/ajnieset/watchlist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajnieset/watchlist"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "author": "Austin Nieset",
   "license": "ISC",
