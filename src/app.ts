@@ -2,13 +2,13 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
 import mongoose, { Connection } from 'mongoose';
 
-import { indexRouter } from './routes';
+import { movieRouter } from './routes';
 
 const app: Application = express();
 const port: number = 3000;
 
 //DB connection
-const connection: string = 'mongodb://127.0.0.1:27017/watchlist';
+const connection: string = 'mongodb://127.0.0.1:27017/movie';
 mongoose.connect(connection, { useNewUrlParser: true, useUnifiedTopology: true });
 const db: Connection = mongoose.connection;
 
@@ -22,7 +22,7 @@ app.set('view engine', 'pug');
 app.use(express.json());
 
 //routing
-app.use('/', indexRouter);
+app.use('/', movieRouter);
 
 app.listen(port, () => {
     console.log(`App is listing on ${port}`)
