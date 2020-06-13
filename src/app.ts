@@ -1,10 +1,19 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
+import mongoose, { Connection } from 'mongoose';
 
 import { indexRouter } from './routes';
 
 const app: Application = express();
 const port: number = 3000;
+
+//DB connection
+const connection: string = 'mongodb://127.0.0.1:27017/watchlist';
+mongoose.connect(connection, { useNewUrlParser: true, useUnifiedTopology: true });
+const db: Connection = mongoose.connection;
+
+db.on('error', (error: string) => {console.log(error)});
+db.on('open', () => {console.log('Connected to the MongoDB')});
 
 // view engine setup
 app.set('views', path.join(__dirname, './views'));
