@@ -8,7 +8,8 @@
     "url": "https://github.com/ajnieset/watchlist"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/app.js"
   },
   "author": "Austin Nieset",
   "license": "ISC",
