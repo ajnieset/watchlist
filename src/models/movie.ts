@@ -20,4 +20,4 @@ const MovieSchema: Schema = new Schema({
     connor_rating: {type: Number}
 });
 
-export default mongoose.model<MovieInterface>('Movie', MovieSchema);
+export default mongoose.model<MovieInterface>('Movie', MovieSchema, 'watchlist');
