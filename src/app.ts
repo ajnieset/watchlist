@@ -2,7 +2,7 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
 import mongoose, { Connection } from 'mongoose';
 
-import { movieRouter } from './routes';
+import { movieRouter } from './routes/routes';
 
 const app: Application = express();
 const port: number = 3000;
