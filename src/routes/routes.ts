@@ -17,7 +17,6 @@ router.get('/movies/add', (req: Request, res: Response) => {
 });
 
 router.post('/movies/add', (req: Request, res: Response) => {
-    console.log(req.body);
     movieController.create(req, res);
 });
 
