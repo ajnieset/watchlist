@@ -3,26 +3,26 @@ html
         title= "Add a movie"
     body
         h1 Add a Movie
-        form(action="/movies/add", method="post")
-        label(for="title") Title: 
+        form(action="/movies/add", method="POST")
+            label(for="title") Title: 
             input(name="title" type="text" value="")
             br
-        label(for="director") Director: 
+            label(for="director") Director: 
             input(name="director" type="text" value="")
             br
-        label(for="description") Description: 
+            label(for="description") Description: 
             input(name="description" type="text" value="")
             br
-        label(for="genre") Genre: 
+            label(for="genre") Genre: 
             input(name="genre" type="text" value="")
             br
-        label(for="date_watched") Date Watched:
+            label(for="date_watched") Date Watched:
             input(name="date_watched" type="text" value="")
             br
-        label(for="austin_rating") Austin's Rating:
+            label(for="austin_rating") Austin's Rating:
             input(name="austin_rating" type="text" value="")
             br
-        label(for="connor_rating") Connor's Rating:
+            label(for="connor_rating") Connor's Rating:
             input(name="connor_rating" type="text" value="")
             br
-        button(type="submit") Add
+            input(type="submit", value="Add")

@@ -13,6 +13,11 @@ router.get('/movies', (req: Request, res: Response) => {
 });
 
 router.get('/movies/add', (req: Request, res: Response) => {
+    res.render('createMovie');
+});
+
+router.post('/movies/add', (req: Request, res: Response) => {
+    console.log(req.body);
     movieController.create(req, res);
 });
 
