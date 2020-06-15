@@ -12,6 +12,10 @@ router.get('/movies', (req: Request, res: Response) => {
     movieController.read(req, res);
 });
 
+router.get('/movies/add', (req: Request, res: Response) => {
+    movieController.create(req, res);
+});
+
 export {
     router as movieRouter
 };
