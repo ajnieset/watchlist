@@ -3,8 +3,12 @@ html
         title= "Watchlist"
     body
         h1= "Movies"
+        a(class="button" href="movies/add") Add Movie
         h2= title
-        p= description
-        p= "Connor's Rating: " + connor_rating
-        p= "Austin's Rating: " + austin_rating
+        p 
+          | #{description} 
+          br
+          | Connor's Rating: #{connor_rating} 
+          br
+          | Austin's Rating: #{austin_rating} 
         
