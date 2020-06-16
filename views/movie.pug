@@ -1,14 +1,11 @@
 html
-    head
-        title= "Watchlist"
-    body
-        h1= "Movies"
-        a(class="button" href="movies/add") Add Movie
-        h2= title
-        p 
-          | #{description} 
-          br
-          | Connor's Rating: #{connor_rating} 
-          br
-          | Austin's Rating: #{austin_rating} 
+  head
+    title= "Watchlist"
+  body
+    h1= "Movies"
+    a(class="button" href="movies/add") Add Movie
+    ul
+      each val in watchlist 
+        li= val.title
+        
         
