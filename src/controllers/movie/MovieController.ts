@@ -22,7 +22,7 @@ export class MovieController extends BaseController {
         res.render('createMovie');
     }
     public read(req: Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs>, res: Response<any>): void {
-        Movie.find({}, (err, watchlist) => {res.render('movie', watchlist[0])});
+        Movie.find({}, (err, watchlist) => {res.render('movie', {watchlist})});
     }
     public update(req: Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs>, res: Response<any>): void {
         throw new Error("Method not implemented.");
