@@ -1,0 +1,29 @@
+html
+  head
+    title= movie.title
+  body
+    a(class="button" href="/movies") Back to Browse
+    h1= movie.title
+    form(action=`/movies/view/${movie._id}`, method="POST")
+      label(for="title") Title: 
+      input(name="title" type="text" value=movie.title)
+      br
+      label(for="director") Director: 
+      input(name="director" type="text" value=movie.director)
+      br
+      label(for="description") Description: 
+      input(name="description" type="text" value=movie.description)
+      br
+      label(for="genre") Genre: 
+      input(name="genre" type="text" value=movie.genre)
+      br
+      label(for="date_watched") Date Watched:
+      input(name="date_watched" type="text" value=movie.date_watched)
+      br
+      label(for="austin_rating") Austin's Rating:
+      input(name="austin_rating" type="text" value=movie.austin_rating)
+      br
+      label(for="connor_rating") Connor's Rating:
+      input(name="connor_rating" type="text" value=movie.connor_rating)
+      br
+      input(type="submit", value="Update")
