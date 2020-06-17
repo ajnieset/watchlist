@@ -12,7 +12,7 @@ const port: number = 3000;
 
 //DB connection
 const connection: string = process.env.DB_CONNECT ? process.env.DB_CONNECT : "";
-mongoose.connect(connection, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(connection, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 const db: Connection = mongoose.connection;
 
 db.on('error', (error: string) => {console.log(error)});
