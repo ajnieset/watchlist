@@ -3,9 +3,10 @@ html
     title= "Watchlist"
   body
     h1= "Movies"
-    a(class="button" href="movies/add") Add Movie
+    a(type="button" href="movies/add") Add Movie
     ul
       each val in watchlist 
         li= val.title
+        a(type="button" href=`/movies/view/${val._id}`) Edit
         
         

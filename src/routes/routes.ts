@@ -20,6 +20,18 @@ router.post('/movies/add', (req: Request, res: Response) => {
     movieController.create(req, res);
 });
 
+router.get('/movies/view/:id', (req: Request, res: Response) => {
+    movieController.show(req, res);
+});
+
+router.post('/movies/view/:id', (req: Request, res: Response) => {
+    movieController.update(req, res);
+});
+
+router.delete('/movies/', (req: Request, res: Response) => {
+    movieController.delete(req, res);
+});
+
 export {
     router as movieRouter
 };
