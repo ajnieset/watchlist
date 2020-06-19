@@ -8,7 +8,7 @@ import { movieRouter } from './routes/routes';
 dotenv.config();
 
 const app: Application = express();
-const port: number = process.env.PORT;
+const port: number = process.env.PORT ? parseInt(process.env.PORT) : 0;
 
 //DB connection
 const connection: string = process.env.DB_CONNECT ? process.env.DB_CONNECT : "";
