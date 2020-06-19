@@ -56,7 +56,11 @@ export class MovieController extends BaseController {
         });
     }
     public delete(req: Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs>, res: Response<any>): void {
-        throw new Error("Method not implemented.");
+        Movie.findByIdAndDelete(req.params.id, {}, (err, movie) => {
+            if (err) console.log(err);
+            if(movie) console.log(`${movie.value?.title} has been deleted`);
+            res.redirect('/movies')
+        });
     }
     
 }
