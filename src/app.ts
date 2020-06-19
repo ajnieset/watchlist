@@ -8,7 +8,7 @@ import { movieRouter } from './routes/routes';
 dotenv.config();
 
 const app: Application = express();
-const port: number = 3000;
+const port: number = process.env.PORT;
 
 //DB connection
 const connection: string = process.env.DB_CONNECT ? process.env.DB_CONNECT : "";
@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'pug');
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
 
 //routing
 app.use('/', movieRouter);
