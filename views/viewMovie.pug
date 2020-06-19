@@ -1,8 +1,9 @@
 html
   head
     title= movie.title
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
   body
-    a(class="button" href="/movies") Back to Browse
+    a(class="btn btn-info" href="/movies") Back to Browse
     h1= movie.title
     form(action=`/movies/view/${movie._id}`, method="POST")
       label(for="title") Title: 
@@ -26,4 +27,4 @@ html
       label(for="connor_rating") Connor's Rating:
       input(name="connor_rating" type="text" value=movie.connor_rating)
       br
-      input(type="submit", value="Update")
+      input(class="btn btn-warning" type="submit", value="Update")

@@ -1,14 +1,15 @@
 html
   head
     title= "Watchlist"
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
   body
     h1= "Movies"
-    a(type="button" href="movies/add") Add Movie
+    a(class="btn btn-primary" type="button" href="movies/add") Add Movie
     ul
       each movie in watchlist 
         li= movie.title 
-        a(type="button" href=`/movies/view/${movie._id}`) Edit
+        a(class="btn btn-warning" type="button" href=`/movies/view/${movie._id}`) Edit
         form(action=`/movies/${movie._id}` method="POST")
-          input(type="submit" value="Delete")
+          input(class="btn btn-danger" type="submit" value="Delete")
         
         
