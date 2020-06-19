@@ -4,3 +4,4 @@ An application to keep track of watched movies and generate suggestions for new 
 ## Dependencies
     * Typescript
     * Express
+    * MongoDB
