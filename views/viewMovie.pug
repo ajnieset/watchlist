@@ -3,28 +3,33 @@ html
     title= movie.title
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
   body
-    a(class="btn btn-info" href="/movies") Back to Browse
-    h1= movie.title
-    form(action=`/movies/view/${movie._id}`, method="POST")
-      label(for="title") Title: 
-      input(name="title" type="text" value=movie.title)
-      br
-      label(for="director") Director: 
-      input(name="director" type="text" value=movie.director)
-      br
-      label(for="description") Description: 
-      input(name="description" type="text" value=movie.description)
-      br
-      label(for="genre") Genre: 
-      input(name="genre" type="text" value=movie.genre)
-      br
-      label(for="date_watched") Date Watched:
-      input(name="date_watched" type="text" value=movie.date_watched)
-      br
-      label(for="austin_rating") Austin's Rating:
-      input(name="austin_rating" type="text" value=movie.austin_rating)
-      br
-      label(for="connor_rating") Connor's Rating:
-      input(name="connor_rating" type="text" value=movie.connor_rating)
-      br
-      input(class="btn btn-warning" type="submit", value="Update")
+    div(class="container mt-5")
+      div(class="d-flex justify-content-between")
+        div(class="")
+          h1= movie.title
+        div(class="")
+          a(class="btn btn-info" href="/movies") Back to Browse
+      form(action=`/movies/view/${movie._id}`, method="POST")
+        div(class="form-group")
+          label(for="title") Title: 
+          input(name="title" type="text" value=movie.title)
+          br
+          label(for="director") Director: 
+          input(name="director" type="text" value=movie.director)
+          br
+          label(for="description") Description: 
+          input(name="description" type="text" value=movie.description)
+          br
+          label(for="genre") Genre: 
+          input(name="genre" type="text" value=movie.genre)
+          br
+          label(for="date_watched") Date Watched:
+          input(name="date_watched" type="text" value=movie.date_watched)
+          br
+          label(for="austin_rating") Austin's Rating:
+          input(name="austin_rating" type="text" value=movie.austin_rating)
+          br
+          label(for="connor_rating") Connor's Rating:
+          input(name="connor_rating" type="text" value=movie.connor_rating)
+          br
+          input(class="btn btn-warning" type="submit", value="Update")
