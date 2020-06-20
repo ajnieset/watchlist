@@ -11,25 +11,31 @@ html
           a(class="btn btn-info" href="/movies") Back to Browse
       form(action="/movies/add", method="POST")
         div(class="form-group")
-          label(for="title") Title: 
-          input(class="form-control" name="title" type="text" value="")
-          br
-          label(for="director") Director: 
-          input(class="form-control" name="director" type="text" value="")
-          br
-          label(for="description") Description: 
-          textarea(cols="30" rows="5" class="form-control" name="description" value="")
-          br
-          label(for="genre") Genre: 
-          input(class="form-control" name="genre" type="text" value="")
-          br
-          label(for="date_watched") Date Watched:
-          input(class="form-control" name="date_watched" type="text" value="")
-          br
-          label(for="austin_rating") Austin's Rating:
-          input(class="form-control" name="austin_rating" type="text" value="")
-          br
-          label(for="connor_rating") Connor's Rating:
-          input(class="form-control" name="connor_rating" type="text" value="")
-          br
-          input(class="btn btn-success" type="submit", value="Add")
+          div(class="row mt-2")
+            div(class="col")
+              label(for="title") Title: 
+              input(class="form-control" name="title" type="text" value="")
+            div(class="col")
+              label(for="director") Director: 
+              input(class="form-control" name="director" type="text" value="")
+          div(class="row mt-2")
+            div(class="col")
+              label(for="description") Description: 
+              textarea(cols="30" rows="5" class="form-control" name="description" value="")
+          div(class="row mt-2")
+            div(class="col")
+              label(for="genre") Genre: 
+              input(class="form-control" name="genre" type="text" value="")
+            div(class="col")
+              label(for="date_watched") Date Watched:
+              input(class="form-control" name="date_watched" type="text" value="")
+          div(class="row mt-2")
+            div(class="col")
+              label(for="austin_rating") Austin's Rating:
+              input(class="form-control" name="austin_rating" type="text" value="")
+            div(class="col")
+              label(for="connor_rating") Connor's Rating:
+              input(class="form-control" name="connor_rating" type="text" value="")
+          div(class="row mt-2")
+            div(class="col")
+              input(class="btn btn-success" type="submit", value="Add")
