@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/app.js"
+    "serve": "node dist/app.js",
+    "start": "npm run build && npm run serve"
   },
   "author": "Austin Nieset",
   "license": "ISC",
