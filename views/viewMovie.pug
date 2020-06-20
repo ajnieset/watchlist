@@ -2,13 +2,13 @@ html
   head
     title= movie.title
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
-  body
+  body(class="bg-secondary")
     div(class="container mt-5")
       div(class="d-flex justify-content-between")
         div(class="")
           h1= movie.title
         div(class="")
-          a(class="btn btn-info" href="/movies") Back to Browse
+          a(class="btn btn-info border border-dark" href="/movies") Back to Browse
       form(action=`/movies/view/${movie._id}`, method="POST")
         div(class="form-group")
           div(class="row mt-2")
@@ -21,7 +21,7 @@ html
           div(class="row mt-2")
             div(class="col")
               label(for="description") Description: 
-              textarea(cols="30" rows="5" class="form-control" name="description" value=movie.description)
+              textarea(cols="30" rows="5" class="form-control" name="description")= movie.description
           div(class="row mt-2")
             div(class="col")
               label(for="genre") Genre: 
@@ -38,4 +38,4 @@ html
               input(class="form-control" name="connor_rating" type="text" value=movie.connor_rating)
           div(class="row mt-2")
             div(class="col")
-              input(class="btn btn-warning" type="submit", value="Update")
+              input(class="btn btn-warning border border-dark" type="submit", value="Update")

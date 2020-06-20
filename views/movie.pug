@@ -2,14 +2,21 @@ html
   head
     title= "Watchlist"
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
-  body
-    h1= "Movies"
-    a(class="btn btn-primary" type="button" href="movies/add") Add Movie
-    ul
-      each movie in watchlist 
-        li= movie.title 
-        a(class="btn btn-warning" type="button" href=`/movies/view/${movie._id}`) Edit
-        form(action=`/movies/${movie._id}` method="POST")
-          input(class="btn btn-danger" type="submit" value="Delete")
-        
-        
+  body(class="bg-secondary")
+    div(class="container mt-5")
+      div(class="d-flex justify-content-between")
+        div
+          h1= "Movies"
+        div
+          a(class="btn btn-primary border border-dark" type="button" href="movies/add") Add Movie
+      ul
+        each movie in watchlist 
+          div(class="card m-5 rounded")
+            div(class="cardbody p-2 bg-light")
+              h3(class="card-title")= movie.title
+              p(class="card-text")= movie.description
+              div(class="d-flex justify-content-between")
+                div
+                  a(class="btn btn-warning border border-dark" type="button" href=`/movies/view/${movie._id}`) Edit
+                form(action=`/movies/${movie._id}` method="POST")
+                  input(class="btn btn-danger border border-dark" type="submit" value="Delete")
