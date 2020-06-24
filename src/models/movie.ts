@@ -6,8 +6,8 @@ export interface MovieInterface extends Document {
     description: string,
     genre: string,
     date_watched: Date,
-    austin_rating: number,
-    connor_rating: number,
+    date_released: Date,
+    rating: number,
 }
 
 const MovieSchema: Schema = new Schema({
@@ -16,8 +16,8 @@ const MovieSchema: Schema = new Schema({
     description: {type: String},
     genre: {type: String, required: true},
     date_watched: {type: Date, required: true, default: Date.now()},
-    austin_rating: {type: Number},
-    connor_rating: {type: Number}
+    date_released: {type: Date},
+    rating: {type: Number},
 });
 
 export default mongoose.model<MovieInterface>('Movie', MovieSchema, 'watchlist');

@@ -8,10 +8,10 @@ export class MovieController extends BaseController {
             title: req.body.title,
             director: req.body.director ? req.body.director : "Unknown",
             description: req.body.description ? req.body.description : "None",
+            date_released: req.body.date_released ? req.body.date_released : null,
             date_watched: req.body.date_watched ? req.body.date_watched : null,
             genre: req.body.genre,
-            austin_rating: req.body.austin_rating,
-            connor_rating: req.body.connor_rating
+            rating: req.body.rating,
         });
 
         newMovie.save((err, movie) => {
@@ -31,10 +31,10 @@ export class MovieController extends BaseController {
             title: req.body.title,
             director: req.body.director ? req.body.director : "Unknown",
             description: req.body.description ? req.body.description : "None",
+            date_released: req.body.date_released ? req.body.date_released : null,
             date_watched: req.body.date_watched ? req.body.date_watched : null,
             genre: req.body.genre,
-            austin_rating: req.body.austin_rating,
-            connor_rating: req.body.connor_rating,
+            rating: req.body.rating,
             _id: req.params.id
         });
 
