@@ -5,7 +5,7 @@ const router = Router();
 const movieController = new MovieController();
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-    res.render('index', {title: 'Watchlist', message: 'Welcome to the Movie'});
+    res.redirect('/movies');
 });
 
 router.get('/movies', (req: Request, res: Response) => {
