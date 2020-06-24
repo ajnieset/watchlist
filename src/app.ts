@@ -11,7 +11,7 @@ const app: Application = express();
 const port: number = process.env.PORT ? parseInt(process.env.PORT) : 0;
 
 //DB connection
-const connection: string = process.env.DB_CONNECT ? process.env.DB_CONNECT : "";
+const connection: string = process.env.MONGODB_URI ? process.env.MONGODB_URI : "";
 mongoose.connect(connection, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 const db: Connection = mongoose.connection;
 
